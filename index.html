@@ -1,47 +1,20 @@
-<!doctype html>
+---
+layout: default
+---
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
+<div class="home">
 
-  <title>Blue Ink Construction</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <h1>Posts</h1>
 
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="assets/css/simple-grid.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 
-</head>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-<body>
-
-
-    <div class="content">
-
-      <section class="top">
-        <p class="date">Serving NJ Since 2007</p>
-        <img src="assets/images/logo-color.png"/>
-      </section>
-
-    <h1>Roofing &sdot; Siding &sdot; Windows &sdot; & More</h1>
-    <h2>Quality Work. Quality Results.</h2>
-
-    <p class="images">
-      <img src="assets/images/pic1.jpg">
-      <img src="assets/images/pic2.jpg">
-      <img src="assets/images/pic3.jpg">
-    </p>
-    <p>
-      With over twenty years of experience in the field, Blue Ink Construction provides professional and outstanding quality service. We are experts in <b>shingles</b>, <b>torch-downs</b> and <b>EPDM roofing</b>, and are equipped for both commercial and residential projects.
-    </p>
-
-    <p>
-      Got a job? <a href="mailto:sandra@blueinkconstruction.com">Contact us</a> for a free estimate!
-    </p>
-
-  </div>
-
-
-</body>
-</html>
+</div>

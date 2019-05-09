@@ -1,0 +1,21 @@
+---
+layout: style
+---
+
+
+.navbar-brand img
+{
+  max-height: 80px;
+}
+
+.navbar-shrink .navbar-brand img
+{
+  max-height: 40px;
+  margin-top: -8px;
+}
+
+
+section:nth-child(2n+2)
+{
+  background: #f0f0f0;
+}
