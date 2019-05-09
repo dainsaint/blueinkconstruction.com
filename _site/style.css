@@ -892,3 +892,8 @@ section:nth-child(2n+2)
   background: #f0f0f0;
 }
 
+.form-control
+{
+  color: #293E5C;
+}
+
